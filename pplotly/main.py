@@ -1,6 +1,7 @@
 import plotly
 import plotly.graph_objects as go
 import plotly.subplots
+from pplotly.Scatter import Scatter
 
 default_layout = dict(
     title=dict(
@@ -68,9 +69,13 @@ default_layout = dict(
 
 
 class Figure(plotly.graph_objects.Figure):
-    def __init__(self, data=None, layout={}, frames=None, skip_invalid=False, **kwargs):
+    def __init__(
+        self, data=None, layout={}, frames=None, skip_invalid=False, **kwargs
+    ):
         layout.update(default_layout)
-        super(Figure, self).__init__(data, layout, frames, skip_invalid, **kwargs)
+        super(Figure, self).__init__(
+            data, layout, frames, skip_invalid, **kwargs
+        )
 
     def add_plot(self, x=[], y=[], name=None):
         self.add_trace(go.Scatter(x=x, y=y, name=name))
@@ -125,7 +130,9 @@ def make_subplots(
 
 
 def make_errorplot(
-    xaxis_title="X-axis title", yaxis1_title="Y-axis title", yaxis2_title="Error"
+    xaxis_title="X-axis title",
+    yaxis1_title="Y-axis title",
+    yaxis2_title="Error",
 ):
     """
     Make error plot

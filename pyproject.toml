@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "PPlotly"
-version = "0.0.1"
+version = "0.0.3"
 authors = [
   { name="Pritam Kalbhor", email="physics.pritam@gmail.com" },
 ]
@@ -26,4 +26,5 @@ Homepage = "https://github.com/pkalbhor/pplotly"
 Issues = "https://github.com/pkalbhor/pplotly/issues"
 
 [tool.ruff]
-line-length = 88  # Customize based on your project
+line-length = 80  # Customize based on your project
+lint.ignore = ["F401"]
