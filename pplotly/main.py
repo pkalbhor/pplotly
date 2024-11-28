@@ -1,7 +1,6 @@
 import plotly
 import plotly.graph_objects as go
 import plotly.subplots
-from pplotly.Scatter import Scatter
 
 default_layout = dict(
     title=dict(

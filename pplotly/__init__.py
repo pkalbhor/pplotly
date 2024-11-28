@@ -1,6 +1,10 @@
 import importlib
 
-main = importlib.import_module(".main", package="pplotly")
-
-# Import all symbols dynamically
-globals().update(vars(main))
+from pplotly.main import (
+    default_layout,
+    go,
+    Figure,
+    make_subplots,
+    make_errorplot,
+)
+from pplotly.Scatter import Scatter
